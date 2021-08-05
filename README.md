@@ -1,2 +1,1 @@
-# VictoriaBentose-commerce
- JaP e-commerce
+# ecommerce-capacitador
