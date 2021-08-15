@@ -3,4 +3,8 @@
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e) {
 
+    document.getElementById("seeMoreBtn").onclick = function (e){
+        window.location.href = "./commands.html"
+    }
+
 });
