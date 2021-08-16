@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 });
 
-document.getElementsByTagName("button")[0].addEventListener("click", function()){
+document.getElementsByTagName("button")[0].addEventListener("click", function(){
 
     const userValue = document.getElementById("user").value
     const passwordValue = document.getElementById("password").value
 
     
-    // window.location.href = "./index.html"
+    // window.location.href = "./home.html"
     
-}
+})
 
