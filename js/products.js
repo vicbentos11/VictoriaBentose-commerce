@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     fetch(PRODUCTS_URL)
     .then(data => data.json())
     .then(info => {
-        for(let i=0; i < data.lengh; i++){
+        for(let i=0; i < info.length; i++){
             let nombre = info.name;
             let descripcion = info.description;
             let costo = info.cost;
@@ -32,6 +32,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
             `
 
         }
-    })  
+    });  
 
 });
