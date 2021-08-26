@@ -4,8 +4,8 @@
 document.addEventListener("DOMContentLoaded", function(e){
 
     document.getElementById("log.Button").onclick = function(e) {
-            sessionStorage.setItem('user', document.getElementById('user_id').value; // Entrega 2
-        validarFormulario (e);
+            sessionStorage.setItem('user', document.getElementById('user_id').value); // Entrega 2
+        validarFormulario (e) ;
     };
 
 });
