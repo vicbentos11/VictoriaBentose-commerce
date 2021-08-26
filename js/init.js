@@ -45,6 +45,6 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e) {
   var nombreUsuario = sessionStorage.getItem("user");
-document.getElementById("mostrar_usuario").innerHTML = "Hola! Bienvenido" + nombreUsuario
+document.getElementById("mostrar_usuario").innerHTML = "Hola" + nombreUsuario + "!"
 
 });
