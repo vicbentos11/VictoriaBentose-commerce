@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 });
 
 function validarFormulario(){
-    var usuario = document.getElementById('mostrar_user').value;
+    var usuario = document.getElementById('mostrar_usuario').value;
     if(usuario.lenght == 0){
         return;
     }
