@@ -4,14 +4,14 @@
 document.addEventListener("DOMContentLoaded", function(e){
 
     document.getElementById("log.Button").onclick = function(e) {
-            sessionStorage.setItem('user', document.getElementById('mostrar_user').value); // Entrega 2
+            sessionStorage.setItem('user', document.getElementById('user_id').value); // Entrega 2
         validarFormulario (e) ;
     };
 
 });
 
 function validarFormulario(){
-    var usuario = document.getElementById('mostrar_usuario').value;
+    var usuario = document.getElementById('user_id').value;
     if(usuario.lenght == 0){
         return;
     }
