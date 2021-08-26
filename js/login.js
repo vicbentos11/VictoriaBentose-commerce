@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", function(e){
 
     document.getElementById("log.Button").onclick = function(e) {
-            localStorage.setItem('user', document.getElementById('user_id').value); // Entrega 2
+            sessionStorage.setItem('user', document.getElementById('user_id').value); // Entrega 2
         validarFormulario (e) ;
     };
 
