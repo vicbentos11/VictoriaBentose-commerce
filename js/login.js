@@ -3,8 +3,8 @@
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
 
-    document.getElementById("logButton").onclick = function(e) {
-            sessionStorage.setItem('user', document.getElementById('mostrar_usuario').value); // Entrega 2
+    document.getElementById("login").onclick = function(e) {
+            sessionStorage.setItem('username', document.getElementById('mostrar_usuario')).value;
         validarFormulario (e) ;
     };
 
@@ -20,7 +20,7 @@ function validarFormulario(){
         return;
     }
     else
-    window.location.href = "./indexhome.html";
+    window.location.href = "./indexhome.html"; //Para indicarle al boton a que ventana ir
     
 }
 

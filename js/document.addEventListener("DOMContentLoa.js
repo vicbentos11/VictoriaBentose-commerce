@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(e){
 
-    document.getElementById("logButton").onclick = function(e) {
-        sessionStorage.setItem("user", document.getElementById("mostrar_usuario").value)
+    document.getElementById("login").onclick = function(e) {
+        sessionStorage.setItem("username", document.getElementById("mostrar_usuario").value)
         
     };
 });
