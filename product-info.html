@@ -41,8 +41,7 @@
 
         <dt>Precio</dt>
         <dd>
-          <p id="productCurrency"></p>
-          <p id="productCost"></p>
+          <p id="productCurrency"></p> 
         </dd>
 
         <dt>Descripción</dt>
@@ -52,7 +51,7 @@
 
         <dt>Categoría</dt>
         <dd>
-          <p id="productCategory"></p>
+          <a href="category-info.html" id="productCategory"></a>
         </dd>
 
         <dt>Cantidad de vendidos</dt>
@@ -66,7 +65,29 @@
           </div>
         </dd>
       </dl>
-      <a type="button" class="btn btn-light btn-lg btn-block" >Comentarios</a>
+      <h3>Comentarios</h3>
+      <br>
+      <div class="row">
+        <div class="list-group" id="comments-list-container">
+        </div>
+      </div>
+  <br>
+        <div label for="state">Agregar nuevo</label>
+           <div class="col-md-6 mb-3">
+          <textarea class="form-control" id="comments-list-container" rows="2"></textarea>
+        </div>
+      </div>
+    <div class="col-md-6 mb-3">
+        <label for="state">Puntuación</label>
+        <select class="custom-select d-block w-25" id="productCurrency" required="">
+          <option selected>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <br>
+        <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
     </div>
   </main>
 
