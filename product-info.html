@@ -22,8 +22,14 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <p class="py-2 d-none d-md-inline-block" id="username" style="color:aqua"></p> <!--Entrega 2 -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="username" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="cart.html">Ver Mi Carrito</a>
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+          <a class="dropdown-item" id="cerrarSesion" href="index.html">Cerrar Sesión</a>
+          </div>
     </div>
   </nav>
   
@@ -64,23 +70,28 @@
           <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
           </div>
         </dd>
+        <dt>Productos Relacionados</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="relatedProducts">
+          </div>
+        </dd>
       </dl>
-      <h3>Comentarios</h3>
+      <dt>Comentarios</dt>
       <br>
       <div class="row">
-        <div class="list-group" id="comments-list-container">
-        </div>
+      <div class="list-group" id="comments-list-container">
       </div>
-  <br>
-        <div label for="state">Agregar nuevo</label>
-           <div class="col-md-6 mb-3">
-          <textarea class="form-control" id="comments-list-container" rows="2"></textarea>
-        </div>
       </div>
-    <div class="col-md-6 mb-3">
-        <label for="state">Puntuación</label>
-        <select class="custom-select d-block w-25" id="productCurrency" required="">
-          <option selected>1</option>
+        <br>
+      <dt>Agregar nuevo</dt>
+        <div class="col-md-6 mb-3">
+        <textarea class="form-control" id="comments-list-container" rows="2"></textarea>
+        </div>
+      <div class="col-md-6 mb-3">
+      <dt>Puntuación</dt>
+        <select class="custom-select d-block w-75" id="productCurrency" required="">
+          <option selected>-- Seleccione una puntuación -- </option>
+          <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>

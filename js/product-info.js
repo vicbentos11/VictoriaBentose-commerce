@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             productCurrencyHTML.innerHTML = products.currency + " " + products.cost;
             productCategoryHTML.innerHTML = products.category;
             productsoldCountHTML.innerHTML = products.soldCount;
-
+        
             //Muestro las imagenes en forma de galería
             showImagesGallery(products.images);
         }
@@ -87,6 +87,41 @@ fetch(PRODUCT_INFO_COMMENTS_URL)
      
     }
     });
+
+//Entrega 4 - Productos Relacionados
+fetch(PRODUCT_INFO_URL)
+.then(data => data.json())
+.then(info => {
+ 
+    for(let i=0; i < info.relatedProducts.length; i++){
+        let relatedProducts = info.relatedProducts[i];
+
+        fetch(PRODUCTS_URL)
+        .then(data => data.json())
+        .then(info => {
+
+        let namerelatedProducts = info[relatedProducts].name;
+        let descriptionrelatedProducts = info[relatedProducts].description;
+        let pricerelatedProducts = info[relatedProducts].cost;
+        let currencyrelatedProducts = info[relatedProducts].currency;
+        let imgrelatedProducts = info[relatedProducts].imgSrc;
+        
+        let productsrelated = "" ;
+        productsrelated += `
+        <div class="col-lg-3 col-md-4 col-6">
+        <div class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="` + imgrelatedProducts + `" alt="">
+            <h5 class="mb-1">`+ namerelatedProducts + `</h5>
+            <div><small class="text-muted">` + descriptionrelatedProducts + `</small></div>
+        <div><small class="text-muted">` + currencyrelatedProducts + " " + pricerelatedProducts + `</small></div>
+        </div>
+    </div>
+        `;
+        document.getElementById("relatedProducts").innerHTML += productsrelated;
+     
+    })
+}
+});
 
 
 

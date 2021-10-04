@@ -47,4 +47,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
   var nombreusuario = sessionStorage.getItem('mostrar_usuario');
   document.getElementById("username").innerHTML = "Hola " + nombreusuario + "!";
 
+  document.getElementById("cerrarSesion").onclick = function () {
+        sessionStorage.removeItem("mostrar_usuario");
+      }
 });
+
