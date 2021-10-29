@@ -3,4 +3,10 @@
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e) {
 
+
+    let userData = []
+
+    showData();
+    
 });
+

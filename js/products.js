@@ -22,24 +22,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
         let imagen = listado.imgSrc;
         let cantidadesVendidas = listado.soldCount;
 
+        //Modificación de Entrega 6 para visualizar en cuadrícula los Productos
          let Productos = "";
          Productos += `
-        <a href="product-info.html" class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + imagen + `" alt="` +  `" class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ nombre +`</h4>
-                        <small class="text-muted">` + "Cantidades vendidas " + cantidadesVendidas + `</small>
-                        <small class="text-muted">` + moneda + costo + `</small>
-                    </div>
-                    <p class="mb-1">` + descripcion + `</p>
-                </div>
-            </div>
-        </a>
-        `
+                  <div class="col-md-4">
+                    <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+                      <img class="bd-placeholder-img card-img-top"  src="` + imagen + `">
+                      <div class="card-body">
+                      <h3 class="m-0">`+ nombre + `</h3>
+                      <p class="card-text">`+ descripcion +`</p>
+                      <div><small class="text-muted">` + "Cant. vendidas: " + cantidadesVendidas + `</small></div>   
+                        <small class="text-muted">` + moneda +`  `+ costo + `</small>
+                      </div>
+                    </a>
+                  </div>
+               `
+
         document.getElementById("products-list-container").innerHTML += Productos;
         array.push(listado);
         
