@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   document.getElementById("cerrarSesion").onclick = function () {
         sessionStorage.removeItem("mostrar_usuario");
+        localStorage.clear(); // entrega 6  
+      
       }
+
 });
 

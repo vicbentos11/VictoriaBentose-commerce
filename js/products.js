@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         let imagen = listado.imgSrc;
         let cantidadesVendidas = listado.soldCount;
 
-        //Modificación de Entrega 6 para visualizar en cuadrícula los Productos
+        //Modificación de Entrega 6 para visualizar en cuadrícula los Productos - modif de clases
          let Productos = "";
          Productos += `
                   <div class="col-md-4">
