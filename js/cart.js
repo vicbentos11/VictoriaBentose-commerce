@@ -71,5 +71,35 @@
             })
     });
 
+    //Entrega 7 
+
+    var tarjetaCredito = document.getElementById("tarjetaCredito");
+    var numeroTarjeta = document.getElementById("numeroDeTarjeta");
+    var fechaTarjeta = document.getElementById("fechaVencimiento");
+    var codigoTarjeta = document.getElementById("codigoSeguridad");
+    var transferenciaBancaria = document.getElementById("transferenciaBancaria");
+    var numeroCuenta = document.getElementById("numeroDeCuenta");
+
+    actualizarModal()
+
+    function actualizarModal() {
+      if (transferenciaBancaria.checked) {
+        numeroTarjeta.disabled = true;
+        fechaTarjeta.disabled = true;
+        codigoTarjeta.disabled = true;
+        numeroCuenta.disabled = false;
+      } else if (tarjetaCredito.checked) {
+        numeroCuenta.disabled = true;
+        numeroTarjeta.disabled = false;
+        fechaTarjeta.disabled = false;
+        codigoTarjeta.disabled = false;
+      }
+    }
+    
+    tarjetaCredito.addEventListener('change', actualizarModal)
+    transferenciaBancaria.addEventListener('change', actualizarModal);
+    
+
+
 
 
